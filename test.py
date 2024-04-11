@@ -7,8 +7,8 @@ st.set_page_config(page_title="HorshecrabDB", page_icon="🦀", layout="wide")
 st.title("HorseshoecrabDB 🦀")
 
 # Connect to the Google Sheet
-url = r"Literature_Horseshoe crab repository.xlsx"
-df = pd.read_excel(url, dtype=str).fillna("")
+url = r"Literature_Horseshoe crab repository.csv"
+df = pd.read_csv(url, dtype=str).fillna("")
 
 # Use a text_input to get the keywords to filter the dataframe
 text_search = st.text_input("Search Reseach Articles", value="")
