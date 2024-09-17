@@ -17,12 +17,10 @@ text_search = st.text_input("Search Reseach Articles", value="")
 m1 = df["Title"].str.contains(text_search)
 m2 = df["Snippets"].str.contains(text_search)
 m3 = df["Authors"].str.contains(text_search)
-m3 = df["DOI"].str.contains(text_search)
-m3 = df["ArticleURL"].str.contains(text_search)
-df_search = df[m1 | m2 | m3]
+m4 = df["DOI"].str.contains(text_search)
+m5 = df["ArticleURL"].str.contains(text_search)
+df_search = df[m1 | m2 | m3| m4| m5]
 
-
-# Another way to show the filtered results
 # Show the cards
 N_cards_per_row = 3
 if text_search:
